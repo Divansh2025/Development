@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.nav-container {
+  margin-bottom: 30px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+.nav1 {
+  background-color: rgb(154, 154, 154);
+  padding: 10px;
+}
+/*first remove list dots or bullets */
+/* target only nav1's ul using descendant method*/
+.nav1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*they're block level elements so making it inline will be better for future*/
+.nav1 li {
+  display: inline;
+}
+
+.nav1 a {
+  position: relative;
+  text-decoration: none;
+  color: #0d0d0d;
+  /* background-color: orange; */
+  padding: 5px 10px;
+}
+
+.nav1 .login-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+
+/* now hovering effect, should create element only after hovers */
+.nav1 a::after {
+  content: "";
+  /* position will be absolute but absolutly relative to 'a' or parents element, 
+  because we set 'a' as relative */
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0; /*left and bottom most*/
+  background-color: rgb(20, 20, 242);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav1 a:hover::after {
+  transform: scaleX(1);
+}
