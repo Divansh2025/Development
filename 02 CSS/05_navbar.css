@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #1a1a1a;
+  background-color: #303030;
   color: #fff;
 }
 
@@ -65,4 +65,93 @@ h2 {
 
 .nav1 a:hover::after {
   transform: scaleX(1);
+}
+
+/* let's target 'horizontal' nav2 now like twitter */
+.nav2 {
+  background-color: #03643c;
+  width: 200px;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.nav2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav2 li {
+  margin-bottom: 12px;
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  /* to take entire container width (which we set 200px) */
+  width: 100%;
+  border-bottom: white 1px solid;
+}
+
+.nav2 a:hover {
+  background-color: rgb(40, 73, 23);
+  border-left: 2px solid rgb(20, 20, 242);
+}
+
+.nav2 .login-btn {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav2 .login-btn:hover {
+  background-color: rgb(1, 87, 1);
+}
+
+/* now nav3 the one with dropdown */
+.nav3 {
+  background-color: #45a2bb;
+  padding: 10px;
+}
+.nav3 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav3 a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.nav3 .dropdown-content {
+  display: none;
+}
+
+.nav3 .dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #3e3e3e;
+  min-width: 150px;
+}
+
+.nav3 .login-btn {
+  background-color: #3e3e3e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav3 .login-btn:hover {
+  background-color: #1e1e1e;
 }
