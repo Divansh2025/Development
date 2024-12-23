@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  height: 100%;
+}
+
+.container {
+  background: linear-gradient(135deg, #8a2be2, #4169e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.logo {
+  width: 150px;
+  /* height: 150px; removing height makes logo takes as much height as required */
+  object-fit: contain;
+  max-width: 250px; /*such that if you shrink it it'll look good*/
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+}
+
+/* '#' for selecting id */
+#notify-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* button {
+  padding: 0.5rem;
+  background-color: #8a2be2;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.33s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover {
+  background-color: #7a1dd1;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+button {
+  padding: 0.5rem;
+  background-color: #8a2be2;
+  border-radius: 5px;
+  border: 2px solid transparent; /* Pre-defined border */
+  cursor: pointer;
+  transition: background-color 0.33s ease-in-out, transform 0.33s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: #7a1dd1;
+  transform: scale(1.01); /* Scales without affecting layout */
+}
