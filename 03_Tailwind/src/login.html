@@ -1,0 +1,75 @@
+<!-- Login div should be set to width-full -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <!-- permanent marker font, also i imported it in tailwind config.js -->
+    <!-- Make sure below things: -->
+    <!-- npx tailwindcss -i ./src/input.css -o ./output.css --watch, recomplie 
+    after making changes -->
+    <!-- Replace ./src/input.css and ./output.css with the paths specific to 
+    your project.-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Login</title>
+  </head>
+  <!-- linear gradient style copy:bg-gradient-to-b from-gray-900 to-gray-800 -->
+  <!-- <body class="flex flex-col items-center justify-center h-screen bg-gray-700"> -->
+  <body
+    class="bg-gradient-to-b from-gray-900 to-gray-800 flex justify-center items-center h-screen"
+  >
+    <!-- try width full and max:width medium, shadow and border radius should be more -->
+    <div
+      class="bg-gray-800 p-8 rounded-2xl shadow-2xl shadow-gray-900 max-w-md w-full"
+    >
+      <h1 class="font-marker font-bold text-center text-4xl mb-6 text-white">
+        Login
+      </h1>
+      <form action="#">
+        <!-- for display block, if you need email and it's output in seperate line just
+         write 'block in class' -->
+        <div>
+          <label class="block text-gray-200 mb-2 font-medium"
+            >Email address</label
+          >
+          <!-- turnoff the focus state / when we click email input box focus:ring-2 focus:ring-blue-500 focus:outline-none -->
+          <input
+            class="w-full px-4 py-3 mb-4 rounded-lg text-white bg-gray-900 border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            type="email"
+            name="Email"
+            id=""
+            placeholder="Enter your email"
+          />
+          <!-- now copy paste in password class -->
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-200 mb-2 font-medium" for=""
+            >Password
+          </label>
+          <input
+            class="w-full mb-4 px-4 py-3 rounded-lg text-white bg-gray-900 border border-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            type="password"
+            name="Password"
+            id=""
+            placeholder="Enter your password"
+          />
+        </div>
+        <!-- bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 -->
+        <button
+          class="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 rounded-lg py-3 text-lg font-marker text-white transition duration-300 ease-in-out transform hover:scale-105"
+          type="submit"
+        >
+          Login
+        </button>
+        <p class="text-gray-400 text-sn mt-4 text-center">
+          <a href="#" class="text-blue-500 hover:underline">Forgot Password?</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
