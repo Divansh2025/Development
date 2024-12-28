@@ -1,0 +1,34 @@
+<!-- read docs of "Responsive-Design" on Tailwind css -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <title>Responsive</title>
+  </head>
+  <!-- just like media query: sm: 640px md:...... -->
+  <!-- tailwind is designed based on mobile first: means if sm: text-sm then it would do opposite of what you think -->
+  <!-- min-h-screen = min-height : 100vh -->
+  <!-- in tailwind sm means what you have written is for mobile screen, if you put breakpoint 'sm' then
+    it means >=640px then do xyz..... -->
+  <!-- so think sm after / as small breakpoint -->
+  <body
+    class="flex flex-col items-center justify-center h-screen bg-gray-800 min-h-screen"
+  >
+    <h1 class="font-marker text-4xl text-white">hello world</h1>
+    <!-- "Shadow: shadow-lg shadow-blue-500/50" -->
+    <button
+      class="bg-blue-500 shadow-lg shadow-blue-500/50 p-4 mt-2 rounded-md text-white"
+    >
+      Subscribe
+    </button>
+    <!-- important note: -->
+    <!-- i have added: "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    to package.json script, so you from now on everytime you just have to run: "npm run tailwind" only -->
+  </body>
+</html>
