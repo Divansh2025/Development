@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* let's apply common css that can be applied to any div */
+.box-model-demo {
+  margin: 30px;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+}
+
+/* bigger: it calculates border + width + margin + padding + height/width, 
+so it may happen that you gave width 300 but width will eventually be '400' because
+300 width + 100 others (like border margin,..) means total width = 400*/
+
+.content-box {
+  box-sizing: content-box;
+  background-color: #ffcccc;
+}
+
+/* smaller: in border box if you give 300px width then resultant width might be 200 
+and other 100px goes to border,padding/margin,.... */
+.border-box {
+  box-sizing: border-box;
+  background-color: #ccffcc;
+}
+.box-model-demo p {
+  margin: 0;
+}
+
+.highlight {
+  background-color: yellow;
+  display: inline-block;
+}
+
+/*very smart, it's only take required amount of space */
+.inline-example {
+  background-color: #cce6ff;
+  padding: 10px;
+  margin: 10px;
+  /* Inline elements ignore width and height */
+  width: 200px;
+  height: 100px;
+}
+
+/*it's rigit, it takes entire height and width as we instructed; 200,100*/
+.block-example {
+  background-color: #ffccff;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+}

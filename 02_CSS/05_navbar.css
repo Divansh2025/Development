@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #303030;
+  color: #fff;
+}
+
+.nav-container {
+  margin-bottom: 30px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+.nav1 {
+  background-color: rgb(154, 154, 154);
+  padding: 10px;
+}
+/*first remove list dots or bullets */
+/* target only nav1's ul using descendant method*/
+.nav1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*they're block level elements so making it inline will be better for future*/
+.nav1 li {
+  display: inline;
+}
+
+.nav1 a {
+  position: relative;
+  text-decoration: none;
+  color: #0d0d0d;
+  /* background-color: orange; */
+  padding: 5px 10px;
+}
+
+.nav1 .login-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+
+/* now hovering effect, should create element only after hovers */
+.nav1 a::after {
+  content: "";
+  /* position will be absolute but absolutly relative to 'a' or parents element, 
+  because we set 'a' as relative */
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0; /*left and bottom most*/
+  background-color: rgb(20, 20, 242);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav1 a:hover::after {
+  transform: scaleX(1);
+}
+
+/* let's target 'horizontal' nav2 now like twitter */
+.nav2 {
+  background-color: #03643c;
+  width: 200px;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.nav2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav2 li {
+  margin-bottom: 12px;
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  /* to take entire container width (which we set 200px) */
+  width: 100%;
+  border-bottom: white 1px solid;
+}
+
+.nav2 a:hover {
+  background-color: rgb(40, 73, 23);
+  border-left: 2px solid rgb(20, 20, 242);
+}
+
+.nav2 .login-btn {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav2 .login-btn:hover {
+  background-color: rgb(1, 87, 1);
+}
+
+/* now nav3 the one with dropdown */
+.nav3 {
+  background-color: #45a2bb;
+  padding: 10px;
+}
+.nav3 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav3 a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+.nav3 .dropdown-content {
+  display: none;
+}
+
+.nav3 .dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #3e3e3e;
+  min-width: 150px;
+}
+
+.nav3 .login-btn {
+  background-color: #3e3e3e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav3 .login-btn:hover {
+  background-color: #1e1e1e;
+}
