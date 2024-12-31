@@ -37,13 +37,13 @@ class BankAccount {
 try {
   const myAccount = new BankAccount(100);
   let testamount = 50;
-  let testwithdraw = 50;
+  let testwithdraw = 30;
   console.log("Initial Balance:", myAccount.getBalance());
   myAccount.deposit(testamount);
-  console.log(`After Deposit of amount:${testamount}`, myAccount.getBalance());
+  console.log(`After Deposit of amount ${testamount}:`, myAccount.getBalance());
   myAccount.withdraw(testwithdraw);
   console.log(
-    `After Withdrawal of amount:${testwithdraw}`,
+    `After Withdrawal of amount ${testwithdraw}:`,
     myAccount.getBalance()
   );
 } catch (error) {
