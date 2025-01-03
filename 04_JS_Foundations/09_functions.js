@@ -71,3 +71,24 @@ function createTeaMaker() {
 
 let teaMaker = createTeaMaker();
 console.log(teaMaker("Green Tea"));
+
+// unlimited arguments:
+function add() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+console.log(add(1, 3, 4, 6, 7, 80, 9, 10)); // you can pass any number of arguments
+
+//using Rest parameters/operators:
+function addnumbers(...numbers) {
+  // it's an array of numbers
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+}
+console.log(addnumbers(1, 3, 4, 6, 7, 80, 9, 10));
